@@ -71,3 +71,15 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
     margin: 20px 0;    /* Optional: Margin for spacing */
 }
+
+.zoom {
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+    width: 100%; /* Ensure the image is responsive */
+    max-width: 100%; /* Prevent it from exceeding the container size */
+    display: block; /* Remove space below the image */
+  }
+  
+  /* Zoom effect on hover */
+  .zoom:hover {
+    transform: scale(1.2); /* Scale the image to 1.2x of its original size */
+  }
