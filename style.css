@@ -92,6 +92,11 @@ section h2 {
     margin-bottom: 10px;
 }
 
+#about p {
+    text-align: justify;
+    margin-bottom: 15px; /* Adds space between paragraphs */
+}
+
 /* Resume Download Link */
 #contact a {
     color: #4CAF50;
