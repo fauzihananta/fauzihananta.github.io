@@ -63,10 +63,8 @@ a {
     text-decoration: none;
 }
 
+/* Global image styles */
 img {
-    width: 100%;
-    max-width: 600px; /* Control max size */
-    height: auto;     /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
     margin: 20px 0;    /* Optional: Margin for spacing */
@@ -75,17 +73,19 @@ img {
 /* Apply to all images with the class 'zoom' */
 .zoom {
     transition: transform 0.3s ease; /* Smooth zoom transition */
-    width: 100%; /* Adjust the image width */
-    max-width: 100%; /* Prevents the image from becoming too large */
+    max-width: 100%; /* Ensures image never exceeds container width */
+    height: auto;    /* Keeps aspect ratio */
     object-fit: cover; /* Maintains the aspect ratio of images */
-  }
-  
-  /* Zoom effect on hover */
-  .zoom:hover {
+    display: block; /* Prevents extra space below the image */
+    transform-origin: center; /* Zoom from the center */
+}
+
+/* Zoom effect on hover */
+.zoom:hover {
     transform: scale(1.2); /* Zoom in by 20% */
-  }
-  
-  /* Optional: Container to limit image size during zoom */
-  .image-container {
+}
+
+/* Optional: Container to limit image size during zoom */
+.image-container {
     overflow: hidden; /* Hides the zoomed-out portion */
-  }  
+}
