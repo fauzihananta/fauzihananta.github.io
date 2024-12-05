@@ -85,8 +85,3 @@ img {
     transform: scale(1.2); /* Zoom in by 20% */
 }
 
-/* Optional: Container to limit image size during zoom */
-.image-container {
-    overflow: hidden; /* Hides the zoomed-out portion */
-    display: inline-block; /* Keeps container size only for its content */
-}
