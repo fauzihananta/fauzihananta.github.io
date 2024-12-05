@@ -72,14 +72,20 @@ img {
     margin: 20px 0;    /* Optional: Margin for spacing */
 }
 
+/* Apply to all images with the class 'zoom' */
 .zoom {
-    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
-    width: 100%; /* Ensure the image is responsive */
-    max-width: 100%; /* Prevent it from exceeding the container size */
-    display: block; /* Remove space below the image */
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+    width: 100%; /* Adjust the image width */
+    max-width: 100%; /* Prevents the image from becoming too large */
+    object-fit: cover; /* Maintains the aspect ratio of images */
   }
   
   /* Zoom effect on hover */
   .zoom:hover {
-    transform: scale(1.2); /* Scale the image to 1.2x of its original size */
+    transform: scale(1.2); /* Zoom in by 20% */
   }
+  
+  /* Optional: Container to limit image size during zoom */
+  .image-container {
+    overflow: hidden; /* Hides the zoomed-out portion */
+  }  
