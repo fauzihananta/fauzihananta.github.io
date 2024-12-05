@@ -68,14 +68,14 @@ img {
     border-radius: 8px; /* Optional: Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
     margin: 20px 0;    /* Optional: Margin for spacing */
+    width: 100%; /* Ensure it’s responsive */
+    max-width: 600px; /* Set a max width for images */
+    height: auto;    /* Keeps aspect ratio */
 }
 
 /* Apply to all images with the class 'zoom' */
 .zoom {
     transition: transform 0.3s ease; /* Smooth zoom transition */
-    max-width: 100%; /* Ensures image never exceeds container width */
-    height: auto;    /* Keeps aspect ratio */
-    object-fit: cover; /* Maintains the aspect ratio of images */
     display: block; /* Prevents extra space below the image */
     transform-origin: center; /* Zoom from the center */
 }
@@ -88,4 +88,5 @@ img {
 /* Optional: Container to limit image size during zoom */
 .image-container {
     overflow: hidden; /* Hides the zoomed-out portion */
+    display: inline-block; /* Keeps container size only for its content */
 }
